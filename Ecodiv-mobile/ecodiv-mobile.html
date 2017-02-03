@@ -1,0 +1,112 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+    <title>[% title %]</title>
+
+    <meta name="generator" content="Zim [% generator.name %], based on the Ecodiv-responsive template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek,latin-ext' rel='stylesheet' type='text/css'> -->
+
+    <!-- Scripts -->
+    <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+    
+    <!-- !! Different stylesheets for different screen sizes. Adapt to your likening-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <link rel="stylesheet" media="screen and (min-width: 741px)" href=[% resource('style.css') %]>
+    <link rel="stylesheet" media="screen and (max-width: 740px)" href=[% resource('style_mobile.css') %]>
+
+</head>
+<body>
+    
+    <!-- See the Zim help file on templates for options -->
+    [% options.line_breaks = 'default' %]
+    [% options.empty_lines = "default" %]
+    <div class="container">
+        <div data-role="page" class="ui-responsive-panel">
+            
+            <!-- Header / title -->
+    
+            <div data-role="header" data-position="fixed">
+                <a href="#nav-panel" data-icon="bars">Table of content</a> 
+                
+                <!-- !! Fill in the website title -->
+                <h1>My website title</h1> 
+                
+                <!-- !! Optionally, create button with custom link. To apply uncomment the next line and fill in the link (and optionally change the button and text)) -->
+                <!-- <a href="http://my.website.org" data-icon="home">Main website</a> -->
+                
+            </div>
+            
+            <!-- Warning message if java script is disabled -->
+            <noscript>
+                <div style="border: 1px solid purple; padding: 10px">
+                    <span style="color:red">This page is best viewed with JavaScript enabled!</span>
+                </div>
+            </noscript>
+            
+            <!-- Page content -->
+            
+            <div data-role="content">
+                <!--[% FOR page IN pages %]-->
+                    <h1>[% page.heading %] <a name='[% anchor(page) %]'></a></h1>
+    
+                    [% page.body %]
+                    <br></br>
+                    
+                    <hr class='footnotes'>
+                    <span class="backlinks">
+                    <!--[% FOR link IN page.backlinks %]-->
+                        [% IF loop.first %]
+                        <hr class='footnotes'>
+                        <b>Backlinks:</b>
+                        [% END %]
+                        <a href='[% uri(link) %]'>[% link.name %]</a>
+                        [% IF loop.last %]<br /><br />[% END %]
+                    <!--[% END %]-->
+                    </span>
+    
+                <!-- !! The script will center all images. If you prefer the default (images at left delete these three lines -->    
+                <script>
+                    $( "img" ).wrap( "<div class='imgcenter'></div>" );
+                </script>
+    
+                [% IF not loop.last %]<hr class='footnotes'/>[% END %]
+            <!--[% END %]-->
+            </div>
+            
+            <!-- Navigation panel -->
+            
+            <div data-role="panel" data-position-fixed="true" data-display="reveal" data-theme="a" id="nav-panel" data-dismissible="false">
+                <div style="display:inline-block;">
+                    
+                    <!-- !! If you want to place your logo, uncomment the next section and fill in the link between the quotation marks after href if you want the logo to link to another page or website -->
+                    <!-- <div id="logos" align="center">
+                        <a title="your title" href="" target="_blank">
+                            <img src=[% resource('zim_logo.png') %] style="border-style:none" align="right"></a>
+                    </div> -->
+                    
+                    <div>
+                        <!-- !! optionally.. add your custom search engine script -->
+                        <a href="#header" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true">Close panel</a>
+    
+                        <!-- !! optionally.. add link to start page or index page. To do so, uncomment the next 2 lines and fill in the webpage name / url-->
+                        <!-- <br></br>
+                        <a href="./link-to-start-page.html">Name of page</a>-->
+                        
+                        [% index() %]
+                        
+                        <!-- !! Optionally, button which brings the user to your contact form. To enable this, remove comment mark below and fill in the link between the quoation marks after href -->
+                        <!--<br></br>
+                        <a title="Contact us" data-icon="info" href="" data-role="button" target="_blank">Contact us</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
