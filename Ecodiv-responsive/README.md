@@ -8,7 +8,7 @@ Template to export your Zim notebook as a responsive/adaptive website that can b
 * Image resize to fit within screen (only works when navigation menu on top)
 * By default an header image is placed on top of each page (you may want to change the default picture or remove this option in the template)
 
-For example websits, see http://ecodiv.earth and http://vegetationmap4africa.org,  
+For an example, see http://vegetationmap4africa.org,  
 
 ### Acknowledgement
 The initial version of this template was based on the [Eight-Five-Zero](https://github.com/jrm4/Eight-Five-Zero) template for Zim.
