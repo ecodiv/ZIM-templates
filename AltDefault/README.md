@@ -2,16 +2,13 @@
 
 In the default html export template of ZIM, the checkboxes are includes as base64 images. These are basically text strings that are interpreted as an image by the browser. In the AltDefault template I replaced the default checkbox icons. 
 
-<ul style="color:#6D6D6D; font-size:16px; font-family:Helvetica, Verdana, Arial, sans-serif; padding:0px; margin:0px; list-style-type:none;">
+![](checked-box.png) Checked box icon
 
-    <li style="text-align:left; line-height: 20px; padding:0px 0px 10px 0px;"><img src="checked-box.png" border="0" style="float:left; margin-right:10px;"> Checked box icon</li>
+![](unchecked-box.png) Unchecked box icon
 
-	<li style="text-align:left; line-height: 20px; padding:0px 0px 10px 0px;"><img src="unchecked-box.png" border="0" style="float:left; margin-right:10px;"> Unchecked box icon</li>
+![](xchecked-box.png) X-marked checkbox icon
 
-    <li style="text-align:left; line-height: 20px; padding:0px 0px 10px 0px;"><img src="xchecked-box.png" border="0" style="float:left; margin-right:10px;"> X-checked box icon</li>
-
-	<li style="text-align:left; line-height: 20px; padding:0px 0px 10px 0px;"><img src="migrated-box.png" border="0" style="float:left; margin-right:10px;"> Migrated box item</li>
-</ul>
+![](migrated-box.png) Migrated checkbox icon
 
 
 The icons were created in [Inkscape](https://inkscape.org/en/) and exported as png images. I used the [Image to data-uri converter](https://websemantics.uk/tools/image-to-data-uri-converter/) to convert them to base64 images.
