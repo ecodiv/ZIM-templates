@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>[% title %]</title>
+	<meta name='Generator' content='[% generator.name %]'>
+	<style type='text/css'>
+		a          { text-decoration: none      }
+		a:hover    { text-decoration: underline }
+		a:active   { text-decoration: underline }
+		strike     { color: grey                }
+		u          { text-decoration: none;
+					 background-color: yellow   }
+		tt         { color: #2e3436;            }
+		pre        { color: #2e3436;
+					 margin-left: 20px          }
+		h1         { text-decoration: underline;
+					 color: #4e9a06; margin-bottom: 0 }
+		h2         { color: #4e9a06; margin-bottom: 0 }
+		h3         { color: #4e9a06; margin-bottom: 0 }
+		h4         { color: #4e9a06; margin-bottom: 0 }
+		h5         { color: #4e9a06; margin-bottom: 0 }
+		p          { margin-top: 0              }
+		span.zim-tag {
+			color: #ce5c00;
+		}
+		div.zim-object {
+			border-style:solid;
+			border-width:1px;
+		}
+		.xchecked-box {
+		    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJHSURBVDiNrdRNaJxVGAXgZ9KZJk2iIWpGCQFxIXQRtLpyk+BCRYsgiIWCUnVhd+pCRSQ00BIJtGSlUF20uogYEIoVqiJUsPUHWkrAxBQEf1qkoFFUDGO0yRwXM1O+fo4739177+Gc8/7cy/8Ulf84H8D9uB034les4H38DKGGl/BnhUM9JYJe7MMy7sM3eBdLuA1fTE5OvrW+uPiR7dsvYT8eLru4Hp9iDtd2s7m2trancexYozk8nJCMjy+F4SJmKz7BU2FPmEqh7CRbk7ySw4cbqdWSWi3rs7ObK8vLu8tiz+PVdu0fhITXQiXJUJLjmZpaD8nQUDMnTvw0MzPzOo6U3XzXLk2oh6WQDA7OZ2PjsyskY2ObOXPmbJJbsAVf4eYO0T14u8gc6qlWV0KyY8dGSEZHN3Pu3HtJthWg+/BMJ3kOz15FlPTlwoWPMzLSDEl/fzOnTx9NsqXUkntxFHpwA34pAQ46efIuq6sV1SqNRsXERFQqKeFWMdJJXsDTBTcP5NSpP9LbmwwMNLOw8OGVnnEkLfFiW97oJDvxZptkMBcvfpt6vZmenmR+/nySvvYAvuxC9qLWxEEfvsc1SZ7Mrl1/h2R6ei3J+FUDYLmzGlp7tohbi7VOYzbJg5mba2Tv3r9y+fKBUj+Kq/F7H09goYzZhrN4JMnOJI8mqZZBbbL+x1oP+muMdsOMta1OaS1pt6jg8TbJHcWLouoPmMDLWq//HXyOH3Ed7sRunMfduFRW6BY34aG2ah2/tcmPa30t/4p/AJMpGJE30HTAAAAAAElFTkSuQmCC);
+		}
+		.unchecked-box {
+		    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFJSURBVDiNrdM/S1tRGMfxT4JkqShIoBQCUhyLOEYREbpUKA4FtxQ6+QIEMyi+AV+ASzNkEQSHIqUUqaWDk6UdpIIN1qGSwUELLXQNx+HeC7fXXEwv/pZzzvNwvs+f8xzuSaUc+wgWMI2H+INzvI3XWypnzkNYxzHmcYTXeI8KdvGm3W4vhBDm8rIbwUdsYTSvgmazudHr9UKs5X6ZvcNqXpREIYRGQul2u62s/xV27oLEoEoIYbPT6ezXarXDrP87xgcBZXSAWaKSJnGJiwKgbbxIgz4XgMCX+L4yxvC7IOga1QT0K4YVURVXCegE9YKgOr6lDad4XAD0CTNpw0vR+P+PFvEhayxjD2sDQp7gByb6OYexj5b85pfQiCH/lDSU2v/Fc6zgq+gDH4qGdRhTWBL18ym62Qj99ADPRK/ySDRnZ6KP/bPfhRtBYFoovTcvkgAAAABJRU5ErkJggg==);
+		}
+		.migrated-box {
+		    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIDSURBVDiNrdTLb4xhFAbw34wyVMhoRbTYTEqjCDYuC0pCIojYSPwHNi5hy8JCYimxaKKxYCURkSYuCyE1TaMRl8alQiKxYdq6dGrRRoMei/kqozMjFp7kzfd953ve5z1Pzjkv/wmpGvFm7EMbFuITnuFG8l6B9LTvRnTiHpbiLi7gPlrxAOcw72/ZteIVjqCuBieDk+jHsmqExkRk+/Qf0as1enREt11l4f14grnT+ReSTCoQeZciL5J1J7qti4jFXV1dvYVCYTgiVkxxm/G6lp3I2xp5hTKxn9GbvRiTE5MREcVi8Tilqh1K/J6C6NEutP6pJiNlm7BbymxQv2rc6lv17wYnH+ZyuU11WIM7ichB4UpFWqlpTxgfqNe/wZLc5fURMaMODSgmJ2+uZq8q6rITvn/MzBo6O8v85qY0viRicBHD/yT0YzSj+Yjisqujqfq179N4jo2QavfCpKXSGn6v2RZKOyYMlcmMWd75Qct5wx+Lz6aCTXiDmdUOjh4dZRWLyLsbA3u2RMRU1Y5SGpFBpZE4XNVCJE0XBrAn1W6HtpvfRkZGvkI2m71XTl+Al9hZoXNbJnpsiKtmlIUP4FFfX9/KiKgY/JZE7EQtm5iD03is1Mi/Ud7Nb7EFZzCA63iEUaVZ3Kx0tVxDO8bKhWrdR4uwV6lZG/EZT3EbI9U2/AIWn8JH54j+ewAAAABJRU5ErkJggg==);
+		}
+		.checked-box {
+		    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJXSURBVDiNrZRPSJRBGMZ/3+7maqlElkKSXjK8CFl0CFRMqIQyhAiikE4igSJktyKCSJQ8ZEWXtvAzbSkEKdygCAUlo9gIMjfMlkRZNP+AIpjtbvt02D982G5dek/zzrzzm2fmmRn4T2Gk6N8CHAX2ArnAMuADngOLiapuWhA2znHDtgGQBlwCxoFjwBTgiUFKgbfAHb/ff6ZtrM2H6ABOblSxDRgGbgFbUyhNq62t7RgKDEWcPU5lP8pW+1h7nbVgEzAInE8BAECSY2JlYjz3ca7s3XYNzAxIUoW1phm4+zcIwNTqVGPJsxJhok5fp7xe77SkxDk7gK9Azt8gozOjGTWDNWuYqH60XpKWCwoKPgMF8ZpKwP0vNa5JV2tmb6YqX1Qq+CsoSVeIGtNk3VZzPJFULumlpNuSdgGUecr25D3JCxf1F2lxfVGSliRlAVWAC8AGbAeWuE8WJs0L6wu9wGGgEZic/zHvnvs59z4cCds9VR5ynDkANw3DWAUWiN4zAC4ATZgcx0TF/cXB2bVZSVIoElL1q2ql96Rr5PuIYjEtaXNs7iHgQRx0BOjiKja6cGGiwr7CoG/Zp4Y3DTJMQ+5v7jhkRdJBy9FdBFriSRrgB7IQBt1cwyRkf2gPYaLWj60RSWFJw5IOWCAG4AV2W025DLQlsi4qMAlgck+SQ1J6EiPPksTtDOAdcCrR00M2Svmo9wFfgPxkg/nAh5g6ZwqAAdTFIPutAw5LOwCUA9eBT0Af8BqYI3rrS4HTwARRtwIbV0gWO4ETsVV3EP2PxoGnMTV/xG9aEg1HbAVltwAAAABJRU5ErkJggg==);
+		}
+		ul {list-style-image: none}
+		/* ul rule needed to reset style for sub-bullets */
+	</style>
+</head>
+<body>
+
+[% options.empty_lines = "default" %]
+
+<!-- Header -->
+<div class='header'>
+[% IF navigation.prev %]
+	[ <a href='[% uri(navigation.prev) %]'>[% gettext("Prev") %]</a> ]
+[% ELSE %]
+	[ <span class='insen'>[% gettext("Prev") %]</span> ]
+[% END %]
+
+[% IF links.get("index") %]
+	[ <a href='[% uri(links.get("index")) %]'>[% gettext("Index") %]</a> ]
+[% ELSE %]
+	[ <span class='insen'>[% gettext("Index") %]</span> ]
+[% END %]
+
+[% IF navigation.next %]
+	[ <a href='[% uri(navigation.next) %]'>[% gettext("Next") %]</a> ]
+[% ELSE %]
+	[ <span class='insen'>[% gettext("Next") %]</span> ]
+[% END %]
+</div>
+
+<hr />
+
+<!-- Wiki content -->
+
+<div class='pages'>
+<!--[% FOR page IN pages %]-->
+	<div class='heading'>
+	<h1>[% page.title %] <a name='[% anchor(page) %]'></a></h1>
+	</div>
+
+	<div class='content'>
+	[% page.body %]
+	</div>
+
+	<br />
+
+	<div class='page-footer'>
+	<!--[% FOR link IN page.backlinks %]-->
+		[% IF loop.first %]<b>[% gettext("Backlinks:") %]</b>[% END %]
+
+		<a href='[% uri(link) %]'>[% link.name %]</a>
+
+		[% IF loop.last %]<br /><br />[% END %]
+	<!--[% END %]-->
+
+	<!--[% FOR file IN page.attachments %]-->
+		[% IF loop.first %]
+			<b>[% gettext("Attachments:") %]</b>
+			<table>
+		[% END %]
+
+			<tr><td><a href='[% uri(file) %]'>[% file.basename %]</a></td><td>&nbsp;</td><td>[% file.size %]</td></tr>
+
+		[% IF loop.last %]
+			</table>
+		[% END %]
+	<!--[% END %]-->
+	</div>
+
+	[% IF not loop.last %]<hr />[% END %]
+
+<!--[% END %]-->
+</div>
+
+</body>
+</html>
